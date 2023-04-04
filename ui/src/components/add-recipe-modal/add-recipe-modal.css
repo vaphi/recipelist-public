@@ -1,0 +1,16 @@
+.add-recipe-button {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.add-recipe-button:hover {
+    color: #a3b899;
+
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}
+
+.icon-add {
+    font-size: small;
+}

@@ -14,11 +14,12 @@ import { UnitTypeModule } from './unit-types/unit-type.module';
     IngredientsModule,
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
-      url: process.env.DATABASE_URL,
       type: 'postgres',
-      ssl: {
-        rejectUnauthorized: false,
-      },
+      host:process.env.POSTGRES_HOST,
+      port:Number(process.env.POSTGRES_PORT),
+      username:process.env.POSTGRES_USER,
+      password:process.env.POSTGRES_PASSWORD,
+      database:process.env.POSTGRES_DB,
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true, // This for development
       autoLoadEntities: true,

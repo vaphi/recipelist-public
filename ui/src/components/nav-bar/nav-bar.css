@@ -1,0 +1,20 @@
+.navbar-nav .nav-link {
+    background: none;
+    border: none;
+    color: white;
+    padding-left: 5px;
+    height: 26px;
+    padding-top: 0px;
+    margin: auto 0;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #a3b899;
+
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}
+
+.container {
+    max-width: none !important;
+}

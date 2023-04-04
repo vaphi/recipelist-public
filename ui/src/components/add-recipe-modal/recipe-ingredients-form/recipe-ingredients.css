@@ -1,0 +1,47 @@
+.ingredients-container {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.remove-icon-container {
+    margin: auto;
+    flex: 0;
+}
+
+.remove-icon.fa {
+    font-size: larger;
+    color: red;
+
+}
+
+.add-ingredient-button-container {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.unit-control-container {
+    flex: 1;
+}
+
+.unit-type-control-container {
+    flex: 1.5;
+}
+
+.ingredient-control-container {
+    flex: 4;
+}
+
+.control {
+    padding: 1%;
+}
+
+.btn.add-button {
+    background-color: #a3b899;
+    color: white;
+}
+
+.btn.add-button:first-child:hover {
+    background-color: #667b68;
+}

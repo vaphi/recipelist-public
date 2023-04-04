@@ -1,0 +1,26 @@
+.login-button {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.login-button:hover {
+    color: #a3b899;
+
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    color: white;
+
+}
+
+.logout-button:hover {
+    color: #f8d3c5;
+
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}

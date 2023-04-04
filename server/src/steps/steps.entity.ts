@@ -7,9 +7,6 @@ class Steps {
  
   @Column('text', {nullable: true})
   public description: string;
- 
-  @Column('int')
-  public step: number;
 
   @Column('int')
   public stepsid: number;

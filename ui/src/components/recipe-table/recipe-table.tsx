@@ -86,9 +86,7 @@ export default function RecipeTable() {
     }
 
     return (
-        <><div>
-            <button>test</button>
-        </div>
+        <>
             <Paper sx={{ width: '100%', overflow: 'hidden' }}>
                 <TableContainer sx={{ maxHeight: 440 }}>
                     <Table stickyHeader aria-label="sticky table">

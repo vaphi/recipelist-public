@@ -11,22 +11,16 @@ class Recipes {
   @Column('varchar', { nullable: true })
   public description: string;
 
-  @Column()
-  public ingredientsid: number;
-
   @Column('text', { nullable: true })
   public notes: string;
 
   @Column('text', { nullable: true })
   public origin: string;
 
-  @Column()
-  public stepsid: number;
-
   @Column('varchar', { nullable: true })
   public type: string;
 
-  @Column()
+  @Column({ type: 'timestamptz', nullable: true })
   public createddt: Date;
 
   @Column('varchar', { nullable: true })

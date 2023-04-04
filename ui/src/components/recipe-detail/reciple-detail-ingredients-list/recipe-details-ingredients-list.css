@@ -1,0 +1,40 @@
+.ingredient-title {
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.recipe-description {
+    flex-basis: 20%;
+}
+
+.recipe-ingredients-list-container {
+    flex-basis: 90%;
+}
+
+.list-group.list-group-horizontal {
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.list-group-item.ingredients-item {
+    min-width: 20%;
+    border: 1px solid #dde6d5;
+    padding: .5%;
+    margin: .5%;
+    background-color: #dde6d5;
+}
+
+.list-group-horizontal>.list-group-item:first-child:not(:last-child) {
+    border: 1px solid #dde6d5;
+    border-radius: 6px;
+}
+
+.list-group-horizontal>.list-group-item+.list-group-item {
+    border: 1px solid #dde6d5;
+    border-radius: 6px;
+}
+
+.list-group-horizontal>.list-group-item:last-child:not(:first-child) {
+    border: 1px solid #dde6d5;
+    border-radius: 6px;
+}

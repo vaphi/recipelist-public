@@ -11,19 +11,19 @@ export class RecipesController {
   }
 
   @Post('/findRecipeById')
-  async findRecipeById(@Body() request : any) {
+  async findRecipeById(@Body() request: any) {
 
     return await this.recipeService.findRecipeById(request.variables.id);
   }
 
   @Post('/findRecipes')
-  async findRecipes(@Body() request : any) {
+  async findRecipes(@Body() request: any) {
 
     return await this.recipeService.findLikeRecipes(request.variables.search);
   }
 
   @Post('/addRecipe')
-  addRecipe(@Body() recipe: any) {
-    return this.recipeService.addRecipe(recipe);
+  async addRecipe(@Body() request: any) {
+    return await this.recipeService.addRecipe(request.variables.recipeData);
   }
 }

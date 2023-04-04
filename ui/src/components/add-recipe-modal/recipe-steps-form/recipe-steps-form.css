@@ -1,0 +1,31 @@
+.add-steps-button-container {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.remove-icon-container {
+    margin: auto;
+    flex: 0;
+}
+
+.control {
+    padding: 1%;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.steps-control-container{
+    flex: 5;
+}
+
+.add-recipe-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}

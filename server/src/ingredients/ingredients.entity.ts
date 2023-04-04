@@ -17,5 +17,5 @@ class Ingredients {
   @Column()
   public unit: number;
 }
- 
+
 export default Ingredients;

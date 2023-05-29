@@ -85,7 +85,7 @@ function AddRecipeModal(props: any) {
 
         console.log(recipeData);
 
-        const apiUrl = 'http://localhost:4200/recipes/addRecipe';
+        const apiUrl = String(process.env.ADD_RECIPE_API);
         const options = {
             method: "POST",
             headers: {

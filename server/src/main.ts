@@ -6,7 +6,11 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, { cors: true });
   app.useStaticAssets(join(__dirname, '..', 'public'));
-  const PORT = 4200;
+  let PORT = 4200;
+
+  if(process.env.ENVIRONMENT === 'prod'){
+    PORT = Number(process.env.PORT);
+  }
   console.log(PORT);
   await app.listen(PORT);
 }

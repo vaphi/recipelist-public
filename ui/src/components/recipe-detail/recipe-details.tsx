@@ -27,7 +27,7 @@ export default function RecipeDetails() {
 
     useEffect(() => {
 
-        const apiUrl = String(process.env.FIND_RECIPE_BY_ID_API);
+        const apiUrl = String(process.env.REACT_APP_FIND_RECIPE_BY_ID_API);
         const options = {
             method: "POST",
             headers: {

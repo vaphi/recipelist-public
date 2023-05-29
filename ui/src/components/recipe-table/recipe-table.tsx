@@ -63,7 +63,7 @@ export default function RecipeTable() {
     const [rows, setRows] = useState<[]>([]);
 
     useEffect(() => {
-        const apiUrl = String(process.env.GET_RECIPES_API);
+        const apiUrl = String(process.env.REACT_APP_GET_RECIPES_API);
         fetch(apiUrl)
             .then((response) => response.json())
             .then((data) => {

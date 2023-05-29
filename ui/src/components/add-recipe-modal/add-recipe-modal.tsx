@@ -85,7 +85,7 @@ function AddRecipeModal(props: any) {
 
         console.log(recipeData);
 
-        const apiUrl = String(process.env.ADD_RECIPE_API);
+        const apiUrl = String(process.env.REACT_APP_ADD_RECIPE_API);
         const options = {
             method: "POST",
             headers: {

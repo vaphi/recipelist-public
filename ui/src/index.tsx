@@ -12,7 +12,7 @@ import { Route, Routes } from 'react-router-dom'
 import RecipeTable from './components/recipe-table/recipe-table';
 import RecipeDetails from './components/recipe-detail/recipe-details';
 import 'font-awesome/css/font-awesome.min.css';
-import { Auth0Provider } from '@auth0/auth0-react';
+// import { Auth0Provider } from '@auth0/auth0-react';
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'></link>
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,13 +20,13 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <Auth0Provider
+    {/* <Auth0Provider
       domain={process.env.REACT_APP_AUTH0_DOMAIN!}
       clientId={process.env.REACT_APP_AUTH0_CLIENTID!}
       authorizationParams={{
         redirect_uri: window.location.origin
       }}
-    >
+    >    </Auth0Provider> */}
       <App />
 
       <BrowserRouter>
@@ -37,7 +37,7 @@ root.render(
           <Route path="/recipe/detail/:recipeId" element={<RecipeDetails />} />
         </Routes>
       </BrowserRouter>
-    </Auth0Provider>
+
   </React.StrictMode>
 );
 

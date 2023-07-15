@@ -21,13 +21,13 @@ function NavBar() {
     console.log("test");
   }
 
-  function ShowAddRecipe() {
-    if (isAuthenticated) {
-      return <AddRecipeModal showModal={show} toggleShow={toggleShow} />
-    } else {
-      return null;
-    }
-  }
+  // function ShowAddRecipe() {
+  //   if (isAuthenticated) {
+  //     return <AddRecipeModal showModal={show} toggleShow={toggleShow} />
+  //   } else {
+  //     return null;
+  //   }
+  // }
 
   // function ShowLoginLogoutButton() {
   //   if (!isAuthenticated && isLoading) {
@@ -49,9 +49,9 @@ function NavBar() {
             <Nav.Link className="nav-link" href="/home">Home</Nav.Link>
             <Nav.Link className="nav-link" href="/recipes">Recipes</Nav.Link>
           </Nav>
-          <div>
+          {/* <div>
             <ShowAddRecipe />
-          </div>
+          </div> */}
           {/* <div>
             <ShowLoginLogoutButton />
           </div> */}

@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import AddRecipeModal from '../add-recipe-modal/add-recipe-modal';
 import { userAuth, userIsAuthenticate } from '../login/user-store'
 import { useAuth0 } from '@auth0/auth0-react';
-// import LoginButton from '../login/login';
+import LoginButton from '../login/login';
 import LogoutButton from '../login/logout';
 import "./nav-bar.css";
 
@@ -21,23 +21,23 @@ function NavBar() {
     console.log("test");
   }
 
-  // function ShowAddRecipe() {
-  //   if (isAuthenticated) {
-  //     return <AddRecipeModal showModal={show} toggleShow={toggleShow} />
-  //   } else {
-  //     return null;
-  //   }
-  // }
+  function ShowAddRecipe() {
+    if (isAuthenticated) {
+      return <AddRecipeModal showModal={show} toggleShow={toggleShow} />
+    } else {
+      return null;
+    }
+  }
 
-  // function ShowLoginLogoutButton() {
-  //   if (!isAuthenticated && isLoading) {
-  //     return null
-  //   } else if (!isAuthenticated) {
-  //     return <LoginButton></LoginButton>
-  //   } else {
-  //     return <LogoutButton></LogoutButton>
-  //   }
-  // }
+  function ShowLoginLogoutButton() {
+    if (!isAuthenticated && isLoading) {
+      return null
+    } else if (!isAuthenticated) {
+      return <LoginButton></LoginButton>
+    } else {
+      return <LogoutButton></LogoutButton>
+    }
+  }
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -49,12 +49,12 @@ function NavBar() {
             <Nav.Link className="nav-link" href="/home">Home</Nav.Link>
             <Nav.Link className="nav-link" href="/recipes">Recipes</Nav.Link>
           </Nav>
-          {/* <div>
+          <div>
             <ShowAddRecipe />
-          </div> */}
-          {/* <div>
+          </div>
+          <div>
             <ShowLoginLogoutButton />
-          </div> */}
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

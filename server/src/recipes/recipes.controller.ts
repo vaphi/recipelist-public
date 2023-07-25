@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { RecipesService } from './recipes.service';
 
-@Controller('recipes')
+@Controller('api/recipes')
 export class RecipesController {
   constructor(private readonly recipeService: RecipesService) { }
 

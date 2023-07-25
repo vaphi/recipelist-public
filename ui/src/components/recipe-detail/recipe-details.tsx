@@ -51,7 +51,7 @@ export default function RecipeDetails() {
 
     useEffect(() => {
 
-        const ingredientsApi = 'http://localhost:4200/ingredients/findIngredientsByRecipeId';
+        const ingredientsApi = String(process.env.REACT_APP_GET_FIND_INGREDIENTS_BY_RECIPE_ID);
         const ingredientOptions = {
             method: "POST",
             headers: {
@@ -72,7 +72,7 @@ export default function RecipeDetails() {
                 console.log('This is your ingredients data', data)
             });
 
-        const stepsApi = 'http://localhost:4200/steps/findStepsByRecipeId';
+        const stepsApi = String(process.env.REACT_APP_GET_FIND_STEPS_BY_RECIPEID);
         const stepsOptions = {
             method: "POST",
             headers: {

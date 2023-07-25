@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { UnitTypeService } from './unit-type.service';
 
-@Controller('unittypes')
+@Controller('api/unittypes')
 export class UnitTypeController {
   constructor(private readonly unitType: UnitTypeService) { }
 

@@ -4,7 +4,15 @@ import { join } from 'path';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule, { cors: true });
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  app.enableCors({
+    origin: [
+      'http://localhost:3000',
+      'http://www.varecipes.xyz'
+    ],
+    methods: ["GET", "POST"],
+    credentials: true,
+  });
   app.useStaticAssets(join(__dirname, '..', 'public'));
   let PORT = 4000;
 

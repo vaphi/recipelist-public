@@ -6,20 +6,20 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
-  app.enableCors(
-    { 
-      origin: ['http://www.varecipes.xyz', 'localhost:3000'],
-      methods: ['POST', 'PUT', 'DELETE', 'GET']
-    }
-  );
-  
+  app.enableCors({
+    allowedHeaders: ['content-type'],
+    origin: ['http://www.varecipes.xyz', 'localhost:3000'],
+    methods: ['GET', 'POST'],
+    credentials: true,
+  });
+
   app.useStaticAssets(join(__dirname, '..', 'public'));
   let PORT = 4000;
 
-  if(process.env.ENVIRONMENT === 'prod'){
+  if (process.env.ENVIRONMENT === 'prod') {
     PORT = Number(process.env.PORT);
   }
   console.log(PORT);
-  await app.listen(PORT);
+  app.listen(PORT);
 }
 bootstrap();

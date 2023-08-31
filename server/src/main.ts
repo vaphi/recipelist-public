@@ -8,7 +8,6 @@ async function bootstrap() {
   app.enableCors({
     allowedHeaders: ["content-type"],
     origin: "http://www.varecipes.xyz",
-    methods: ["GET", "POST"],
     credentials: true,
   });
   app.useStaticAssets(join(__dirname, '..', 'public'));

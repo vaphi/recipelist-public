@@ -5,11 +5,14 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  app.enableCors({
-    allowedHeaders: ["content-type"],
-    origin: "http://www.varecipes.xyz",
-    credentials: true,
-  });
+
+  app.enableCors(
+    { 
+      origin: ['http://www.varecipes.xyz', 'localhost:3000'],
+      methods: ['POST', 'PUT', 'DELETE', 'GET']
+    }
+  );
+  
   app.useStaticAssets(join(__dirname, '..', 'public'));
   let PORT = 4000;
 

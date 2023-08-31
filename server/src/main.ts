@@ -7,10 +7,7 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.enableCors({
     allowedHeaders: ["content-type"],
-    origin: [
-      "http://localhost:3000",
-      "http://www.varecipes.xyz"
-    ],
+    origin: "http://www.varecipes.xyz",
     methods: ["GET", "POST"],
     credentials: true,
   });
